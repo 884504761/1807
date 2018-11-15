@@ -18,7 +18,15 @@ require(["config"],function(){
 			}
 		}).then(function(){
 			var getcookie = $.cookie("data");
+			var getuser = $.cookie("user");
 			//如果存在cookie
+			if(getuser){
+				console.log(getuser);
+				var obj = {};
+				var arr = getuser.split(":");
+				console.log(arr);
+				$("#username").val(arr[1]);
+			}
 			if(getcookie){
 				var obj = {};
 				var arr = getcookie.split(",");

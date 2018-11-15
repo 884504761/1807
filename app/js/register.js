@@ -26,10 +26,31 @@ require(["config"],function(){
 				var username = $("#username").val();
 				if(!(phone.test(username) || mail.test(username))){
 					$("#promote1").css("display","block");
+					$("#promote_name").css("display","none");
 					uTrue = false;
 				}else{
 					$("#promote1").css("display","none");
-					uTrue = true
+					var username = $("#username").val();
+					console.log(username);
+					var data = {
+						username: username
+					};
+					$.ajax({
+						method:"post",
+						data: data,
+						dataType:"json",
+						url:"http://localhost/api/isuser.php",
+						success: function(res){
+							console.log(res);
+							if(res.code === 1){
+								//document.cookie = "login=true;path=/"; //使用cookie记录登录状态
+								uTrue = true;
+								$("#promote_name").css("display","none");
+							}else{
+								$("#promote_name").css("display","block");
+							}
+						}
+					})
 				}
 			})
 			$("#password").blur(function(){
@@ -77,9 +98,11 @@ require(["config"],function(){
 								console.log(res);
 								if(res.code === 1){
 									//document.cookie = "login=true;path=/"; //使用cookie记录登录状态
-									alert("注册成功")
+									alert("注册成功");
+									$.cookie("user","username:"+username,{ expires: 7 });
+									$(location).attr('href', '/html/login.html');
 								}else{
-									alert("注册失败");
+									alert("用户已存在");
 								}
 							}
 						})
