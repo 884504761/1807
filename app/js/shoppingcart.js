@@ -15,7 +15,7 @@ require(["config"],function(){
 			try{
 				header.head_cart();
 			}catch(e){
-				console.log("not found cookie");
+				console.log("not found cookie"); 
 			}
 		}).then(function(){
 			var carts = $.cookie("cart");
