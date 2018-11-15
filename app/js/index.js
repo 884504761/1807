@@ -10,17 +10,20 @@ require(["config"], function(){
 				beside.rt();
 			})
 		}).then(function(){
+			console.log(header.head_cart);
+			header.head_cart();
+			/* try{
+				header.head_cart();
+			}catch(e){
+				console.log("not found cookie");
+			} */
 			header.nav();
 			header.barrage(); 
 			header.fix();
 			header.isLogin();
 			header.head_search();
 			banner.ban();
-			try{
-				header.head_cart();
-			}catch(e){
-				console.log("not found cookie");
-			}
+			
 		})
 	})
 })

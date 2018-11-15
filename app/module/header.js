@@ -66,6 +66,7 @@ define(["tools","jquery","template","reckon","jquery-cookie"],function(tools,$,t
 		$("#cart_list").html(html);
 		$("#gouwuche").mouseenter(function(){
 			$("#cart").slideDown("slow");
+			console.log("111111");
 		});
 		$("#cart").mouseleave(function(){
 			$(this).slideUp("slow");

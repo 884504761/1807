@@ -101,7 +101,7 @@ require(["config"],function(){
 					}
 					console.log(arr);
 					var str = JSON.stringify(arr);
-					$.cookie("cart",str,{ expires: 7 });
+					$.cookie("cart",str,{ path:"/",expires: 7 });
 					header.head_cart();
 					$("#cart").slideDown("slow");
 					setTimeout(function(){
