@@ -1,0 +1,82 @@
+$baseColor:#1d1d1d;
+$sh2:28px;
+$wh2:700;
+@mixin btPadding($num) {
+	padding-left: $num;
+	padding-right: $num;
+}
+@mixin btMargin($num){
+	margin-left: $num;
+	margin-right: $num; 
+}
+@mixin tmMargin($num1,$num2){
+	margin-top: $num1;
+	margin-bottom: $num2;
+}
+@mixin btBorder($num1,$num2){
+	border-bottom: $num1 solid $num2;
+	border-bottom: $num1 solid $num2;
+}
+*{margin: 0; padding: 0;box-sizing: border-box;}
+html{font-family:"Microsoft Yahei";color:$baseColor;}
+li{list-style: none;}
+a{text-decoration:none;color:$baseColor;}
+
+
+/* 元子类 */
+.fl{float: left;}
+.fr{float: right;}
+.vcenter{
+	display: flex;
+	align-items: center;
+}
+.tcenter{
+	display: table-cell;
+    vertical-align: middle;
+}
+.center{
+	margin-left:auto;
+	margin-right:auto;
+}
+.black{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+.black:hover{background-color: rgba(0,0,0,0.2);}
+.clearfix::after {
+            content: ".";
+            clear: both;
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            height: 0;
+}
+.clearfix {
+            zoom: 1;
+}
+.btn_buy{
+	position: absolute;
+	width: 140px;
+	height: 50px;
+}
+.btn_buy{
+	position: absolute;
+	display: none;
+	width: 140px;
+	height: 50px;
+	line-height: 46px;
+	border: 2px solid #FFFFFF;
+	color: #FFFFFF;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	transition: all .5s; 
+}
+.btn_buy:hover{
+	background: #FFFFFF;
+	color: #1d1d1d;
+}

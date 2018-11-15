@@ -1,0 +1,99 @@
+@import "component/reset.scss";
+@import "component/header.scss";
+@import "component/footer.scss";
+@import "component/beside.scss";
+@import "component/banner.scss";
+h2{font-size: $sh2;font-weight: $wh2;margin-top: 18px;margin-bottom: 8px;}
+h3{font-size:18px;font-weight:500;color:#4c4c4c;}
+.content{
+	.artical{
+		width: 100%;
+		height: 190px;
+		margin: 40px 0 50px 0;
+		text-align: center;
+		p{
+			font-size: 24px;
+			line-height: 29px;
+			color: #1d1d1d;
+		}
+		h1{
+			font-size: 48px;
+			font-weight: 700;
+			color: #1d1d1d;
+			margin-top: 38px;
+			margin-bottom: 37px;
+		}
+		.btn{
+			font-size: 16px;
+			text-align: center;
+			a{
+				display: inline-block;
+				width: 140px;
+				height: 50px;
+				line-height: 46px;
+				border: 2px solid #1d1d1d;
+				color: #1d1d1d;
+				margin: 0 20px 10px 20px;
+				transition: all .5s; 
+			}
+			a:hover{
+				background: #1d1d1d;
+				color: #FFFFFF;
+			}
+			a:hover .btn_buy{display: inline-block;}
+		}
+	}
+	.design{
+		overflow: hidden;
+		margin-bottom: 50px;
+		.designs{
+			float: left;
+			width: 50%;
+			text-align:center;
+			img{width: 100%;}
+			.box:hover{color: $baseColor;}
+			.bk{
+				line-height: 100%;
+				position: relative;
+				width: 100%;
+			}
+		}
+		.designs:hover .btn_buy{display: inline-block;}
+	}
+	.shoes{
+		text-align: center;
+		margin-bottom: 50px;
+		.bk{
+			position: relative;
+			width: 100%;
+			line-height: 100%;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	.shoes:hover .btn_buy{display: inline-block;}
+	.recommend{
+		margin-bottom: 50px;
+		.box{
+			position: relative;
+			text-align: center;
+			display: block;
+			float: left;
+			width: 32%;
+			.bk{
+				position: relative;
+				width: 100%;
+				line-height: 100%;
+				img{
+					width: 100%;
+				}
+			}
+		}
+		.box:nth-child(2){margin: 0 2%;}
+		a:hover{
+			color: #1d1d1d;
+		}
+		a:hover .btn_buy{display: inline-block;}
+	}
+}

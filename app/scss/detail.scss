@@ -1,0 +1,376 @@
+@import "component/reset.scss";
+@import "component/header.scss";
+@import "component/footer.scss";
+.content{
+	width: 1320px;
+	@include btPadding(20px);
+	.content-top{
+		width: 1280px;
+		height: 572px;
+		position: relative;
+		@include tmMargin(60px,60px);
+		.row{
+			.row-left{
+				float: left;
+				width: 768px;
+				height: 572px;
+				.col1{
+					width: 56px;
+					height: 400px;
+					float: left;
+					ul{
+						width: 56px;
+						li{
+							width: 56px;
+							height: 64px;
+							margin-bottom: 10px;
+							padding: .5px;
+							img{
+								width: 52px;
+								height: 60px;
+							}
+						}
+						li:hover{
+							border: 2px solid #1d1d1d;
+						}
+					}
+				}
+				.col2{
+					width: 636px;
+					height: 572px;
+					float: left;
+					margin-left: 54px;
+					background: #0086B3;
+					ul{
+						width: 636px;
+						height: 572px;
+						position: relative;
+						li{
+							position: absolute;
+						}
+						.ac{z-index: 999;}
+						#sm_box{
+							position: absolute;
+							width: 250px;
+							height: 250px;
+							background: rgba(255,255,255,0.4);
+							z-index: 1000;
+							display: none;
+						}
+					}
+				}
+			}
+			.row-right{
+				float: left;
+				width: 512px;
+				height: 572px;
+				padding-left: 41px;
+				padding-right: 77px;
+				h1{
+					font-size: 22px;
+					color: #1d1d1d;
+					line-height: 30px;
+					font-weight: 500;
+				}
+				.price{
+					@include tmMargin(20px,25px);
+				}
+				.product-color{
+					width: 100%;
+					height: 66px;
+					p{
+						font-size: 14px;
+						color: #1d1d1d;
+						margin-bottom: 8px;
+					}
+					.color-main{
+						height: 42px;
+						div{
+							float: left;
+							width: 42px;
+							height: 30px;
+							margin: 0 11px 8px 0;
+							background: #000000;
+						}
+					}
+				}
+				.mob{
+					.size-name{
+						height: 77px;
+						.pdp-title{
+							height: 19px;
+							@include tmMargin(15px,8px);
+							p{
+								font-size: 14px;
+								color: #1d1d1d;
+								span{
+									float: right;
+								}
+							}
+						}
+						.pdp-size{
+							height: 50px;
+							li{
+								@include btPadding(16px);
+								margin: 0 13px 12px 0;
+								float: left;
+								width: auto;
+								height: 38px;
+								border: 1px solid #c7c7c7;
+								line-height: 38px;
+								text-align: center;
+								cursor: pointer;
+							}
+							.this_size{
+								border: 2px solid #1d1d1d;
+							}
+						}
+					}
+					.pdp-num{
+						height: 54px;
+						@include tmMargin(28px,8px);
+						p{
+							margin-bottom: 8px;
+							font-size: 14px;
+						}
+						.calculateNum{
+							float: left;
+							height: 30px;
+							div{
+								float: left;
+								height: 30px;
+								width: 35px;
+								border: 1px solid #979797;
+								font-size: 0;
+								line-height: 28px;
+								text-align: center;
+							}
+							input{
+								float: left;
+								width: 50px;
+								height: 30px;
+								text-align: center;
+								color: #1d1d1d;
+								font-size: 14px;
+								border: 1px solid #979797;
+								border-left: none;
+								border-right: none;
+							}
+						}
+					}
+					.pdp-btn{
+						width: 100%;
+						height: 45px;
+						@include tmMargin(24px,9px);
+						a{
+							display: block;
+							float: left;
+							width: 189px;
+							height: 48px;
+							line-height: 48px;
+							background: #000;
+							color: #FFFFFF;
+							text-align: center;
+						}
+						#addCar{
+							background: #ea212e;
+							transition: .5s;
+							margin-right: 15px;
+						}
+						#addCar:hover{background: #000000;}
+					}
+					.pdp-share{
+						height: 37px;
+						a{
+							display: block;
+							float: left;
+							margin-top: 14px;
+							margin-right: 31px;
+							line-height: 23px;
+							font-size: 14px;
+							color: #1d1d1d;
+							i{
+								top: 3px;
+								margin-right: 5px;
+								position: relative;
+								font-size: 24px;
+							}
+						}
+						a:hover{color: #1d1d1d;}
+					}
+				}
+			}
+		}
+		.big_box{
+			width: 500px;
+			height: 500px;
+			position: absolute;
+			border: 1px solid #1d1d1d;
+			left: 800px;
+			overflow: hidden;
+			display: none;
+			top: 0;
+			img{
+				position: absolute;
+			}
+		}
+	}
+	.content-detasils{
+		margin-bottom: 40px;
+		.describe{
+			width: 1280px;
+			.describe-title{
+				position: relative;
+				padding-left: 14px;
+				height: 60px;
+				background-color: #f6f6f6;
+				._title{
+					position: absolute;
+					line-height: 58px;
+					height: 60px;
+					width: 100%;
+					font-size: 22px;
+					font-weight: 500;
+					color: #1d1d1d;
+					letter-spacing: 0;
+				}
+				.ac{display: none;}
+				span{
+					position: absolute;
+					right: 30px;
+					i{
+						font-size: 20px;
+						color: rgb(156, 154, 154);
+					}
+				}
+				.jia{display: none;}
+				.jian{display: block;}
+			}
+			.describe-main{
+				height: 316px;
+				width: 100%;
+				padding: 18px 0 22px 15px;
+				.describe-text{
+					.box{
+						min-height: 28px;
+						overflow: hidden;
+						margin-top: 20px;
+						span{
+							float: left;
+							font-size: 18px;
+							font-weight: bold;
+							line-height: 26px;
+						}
+						ul{
+							float: left;
+							li{
+								font-size: 16px;
+								margin-left: 36px;
+								line-height: 28px;
+								position: relative;
+								color: #000;
+								list-style: initial;
+							}
+						}
+					}
+				}
+			}
+			.pice-tag{
+				height: 56px;
+				overflow: hidden;
+				@include tmMargin(20px,30px);
+				padding-left: 15px;
+				span{
+					float: left;
+					font-size: 18px;
+					font-weight: bold;
+					line-height: 26px;
+				}
+				ul{
+					float: left;
+					li{
+						font-size: 16px;
+						margin-left: 36px;
+						line-height: 28px;
+						position: relative;
+						color: #000;
+						list-style: initial;
+					}
+				}
+			}
+			.size-specification{
+				width: 1280px;
+				height: 452px;
+				margin-top: 40px;
+				@include tmMargin(40px,0);
+				.good{
+					width: 300px;
+					height: 452px;
+					float: left;
+					text-align: center;
+					.good-pic{
+						width: 300px;
+						height: 300px;
+					}
+					.good-text{
+						.good-text-title{
+							height: 60px;
+							@include tmMargin(30px,24px);
+							font-size: 24px;
+							color: #000;
+							letter-spacing: 0;
+							line-height: 30px;
+						}
+						p{
+							font-size: 14px;
+							color: #4a4a4a;
+							letter-spacing: 0;
+							line-height: 19px;
+						}
+					}
+				}
+				.size-main{
+					float: left;
+					width: 896px;
+					height: 379px;
+					padding-left: 45px;
+					.size-detail{
+						height: 292px;
+						margin-bottom: 33px;
+						dl{
+							float: left;
+							text-align: center;
+							width: 20%;
+						    border-top: 1px solid #cdcdcd;
+							border-bottom: 1px solid #cdcdcd;
+							dt{
+								line-height: 50px;
+								height: 50px;
+								font-size: 14px;
+								font-weight: normal;
+							}
+							dd{
+								font-size: 14px;
+								height: 40px;
+								border-top: 1px solid #cdcdcd;
+								line-height: 40px;
+							}
+						}
+					}
+					.explain{
+						p{
+							font-size: 14px;
+							color: #1D1D1D;
+							a{
+								color: #337ab7;
+							}
+							a:hover{
+								color: #23527c;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

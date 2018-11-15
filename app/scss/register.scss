@@ -1,0 +1,86 @@
+@import "component/reset.scss";
+@import "component/header.scss";
+@import "component/footer.scss";
+.content{
+	width: 1320px;
+	height: 602px;
+	@include tmMargin(70px,25px);
+	.box{
+		width: 650px;
+		height: 100%;
+		h4{
+			font-size: 26px;
+			color: #1d1d1d;
+			margin-bottom: 34px;
+			letter-spacing: 0;
+			font-weight: 500;
+		}
+		form{
+			width: 650px;
+			height: 538px;
+			.form-input{
+				position: relative;
+				width: 400px;
+				height: 77px;
+				margin-bottom: 33px;
+				p{
+					font-size: 16px;
+					color: #1d1d1d;
+					letter-spacing: 0;
+					margin-bottom: 10px;
+				}
+				input{
+					width: 400px;
+					height: 48px;
+					padding: 12px;
+					border: 1px solid #c7c7c7;
+				}
+				span{
+					display: none;
+					position: absolute;
+					top: 48;
+					left: 0;
+					color: #e52837;
+					font-size: 12px;
+				}
+			}
+			.content-choice{
+				width: 100%;
+				height: 72px;
+				margin-bottom: 33px;
+				input{
+					position: relative;
+					width: 24px;
+					height: 24px;
+					border: 1px solid #000;
+					top: 6px;
+					margin-right: 5px;
+				}
+				span{
+					font-size: 14px;
+					color: #1d1d1d;
+					line-height: 24px;
+				}
+			}
+			.content-bottom{
+				width: 100%;
+				height: 70px;
+				margin-bottom: 33px;
+				button{
+					width: 400px;
+					height: 60px;
+					background: #ea212e;
+					border: none;
+					font-weight: bolder;
+					font-size: 24px;
+					color: #FFFFFF;
+					cursor: pointer;
+					margin-right: 70px;
+				}
+				button:hover{
+					background: #1d1d1d;
+				}
+			}
+		}
+	}
+}

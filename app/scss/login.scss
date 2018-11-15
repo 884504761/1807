@@ -1,0 +1,94 @@
+@import "component/reset.scss";
+@import "component/header.scss";
+@import "component/footer.scss";
+.content{
+	width: 1230px;
+	height: 361px;
+	@include tmMargin(70px,25px);
+	@include btPadding(20px);
+	h4{
+		font-size: 28px;
+		margin-bottom: 35px;
+		font-weight: 500;
+	}
+	.content-left{
+		width: 595px;
+		height: 335px;
+		float: left;
+		form{
+			display: flex;
+			flex-direction: column;
+			.check{
+				width: 400px;
+				height: 24px;
+				margin-bottom: 35px;
+				input{
+					width: 24px;
+					height: 24px;
+					padding: 0;
+					float: left;
+					-webkit-background: none;
+					
+				}
+				span{float: left;margin-left: 5px;}
+				a{float: right;}
+			}
+			input{
+				width: 400px;
+				height: 48px;
+				padding: 12px;
+				border: 1px solid #c7c7c7;
+			}
+			.name{margin-bottom: 34px;}
+			.pwd{margin-bottom: 18px;}
+			button{
+				width: 400px;
+				height: 60px;
+				background: #ea212e;
+				border: none;
+				font-weight: bolder;
+				font-size: 24px;
+				color: #FFFFFF;
+				cursor: pointer;
+			}
+			button:hover{
+				background: #1d1d1d;
+			}
+		}
+		
+		
+	}
+	.content-right{
+		width: 595px;
+		height: 361px;
+		padding-left: 195px;
+		float: left;
+		p{
+			color: #1d1d1d;
+			font-size: 14px;
+			margin-bottom: 31px;
+		}
+		ul{
+			margin-bottom: 82px;
+			li{
+				color: #1d1d1d;
+				font-size: 14px;
+				line-height: 22px;
+			}
+		}
+		.btn_register{
+			display: block;
+			width: 400px;
+			height: 60px;
+			line-height: 56px;
+			border: 2px solid #1d1d1d;
+			text-align: center;
+			font-size: 24px;
+		}
+		.btn_register:hover{
+			background: #1d1d1d;
+			color: #FFFFFF;
+		}
+		
+	}
+}

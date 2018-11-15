@@ -1,0 +1,307 @@
+@import "reset.scss";
+$hoverColor:red;
+a:hover{color:$hoverColor;}
+.head{
+	z-index: 9999;
+	height: 34px;
+	color: #ffffff;
+	font-size: 12px;
+	background-color: #1d1d1d;
+	@include btPadding(15px);
+	#barrage{
+		float: left;
+		line-height: 34px;
+		height: 34px;
+		width: 60%;
+		overflow: hidden;
+		position: relative;
+	}
+	#running{position: absolute;font-size: 14px;}
+	.box{
+		float: right;
+		height: 34px;
+		line-height: 34px;
+		text-align: center;
+		font-size: 13px;
+		@include btMargin(18px);
+		i{
+			font-size: 18px;
+			color: #FFFFFF;
+			@include btMargin(10px);
+		}
+	}
+}
+
+nav{
+	z-index: 9999;
+	height:61px;
+	width: 100%;
+	position: relative;
+	border-bottom: 1px solid #e5e5e5;
+	background: #ffffff;
+	.logo{
+		width: 60px;
+		height: 61px;
+		display: block;
+		background: url(../../images/logo@2x.jpg);
+		background-size: 60px;
+		float: left;
+		z-index: 999;
+	}
+	ul{
+		float: left;
+		.subMenu{
+			float: left;
+			margin-left: 40px;
+			height: 61px;
+			font-size: 18px;
+			color: #1d1d1d;
+			a{display:block;padding: 0 4px;line-height: 61px;}
+		}
+		.subMenu:hover{
+			border-bottom: 5px solid red;
+		}
+		#xptj .content{
+			left: 0;
+			top: 61px;
+			width: 100%;
+			height: 275px;
+			display: none;
+			position: absolute;
+			background: #FFFFFF;
+			padding: 25px 20px 35px 100px;
+			.list{
+				float: left;
+				li{
+					width: 260px;
+					font-size: 16px;
+					margin-bottom: 33px;
+					a{line-height: 18px;}
+				}
+			}
+			.pic{
+				float: left;
+				p{text-align: center;font-size: 16px;line-height: 0;}
+				a{float: left;margin-right: 70px;}
+				a:hover{color: #1d1d1d;}
+				img{height: 182px;}
+			}
+		}
+		#rmsp .content{
+			left: 0;
+			top: 61px;
+			width: 100%;
+			display: none;
+			position: absolute;
+			background: #FFFFFF;
+			padding: 25px 20px 35px 100px;
+			.list{
+				float: left;
+				li{
+					width: 260px;
+					font-size: 16px;
+					margin-bottom: 33px;
+					a{line-height: 18px;}
+				}
+			}
+			.pic{
+				float: left;
+				p{text-align: left;font-size: 12px;line-height: 16px;color: #1d1d1d;}
+				a{
+					float: left;
+					margin-right: 70px;
+					width: 160px;    
+					font-size: 12px;
+				}
+				a:hover{color: #1d1d1d;}
+				img{width: 162px;;}
+			}
+		}
+		.content{
+			left: 0;
+			top: 61px;
+			width: 100%;
+			display: none;
+			position: absolute;
+			background: #FFFFFF;
+			padding: 25px 20px 35px 100px;
+			dl{
+				a{line-height: 18px;}
+				float: left;
+				dt{
+					font-size: 16px;
+					color: #1d1d1d;
+					margin: 0 0 10px;
+				}
+				dd{
+				    font-size: 12px;
+					color: #4a4a4a;
+					margin: 4px 0;
+					padding: 0;
+					line-height: 18px;
+				}
+				.nzpic{
+					float: left;
+				}
+			}
+			dl:nth-of-type(1){width: 250px;}
+			dl:nth-of-type(2){width: 125px;}
+			dl:nth-of-type(3){width: 125px;}
+			dl:nth-of-type(4){width: 125px;}
+			dl:nth-of-type(5){width: 125px;}
+			dl:nth-of-type(6){width: 430px;}
+		}
+	}
+	.right{
+		height: 61px;
+		float: right;
+		.box{
+			height: 61px;
+			float: left;
+			@include btPadding(25px);
+			.search{
+				border: 1px solid #c7c7c7;
+				height: 36px;
+				@include btPadding(5px);
+				input{
+					border: none;
+					height: 30px;
+					outline: none;
+					width: 70px;
+					transition: 0.5s;
+				}
+				input:hover{width: 200px;}
+				input:focus{width: 200px;}
+				button{
+					height: 33px;
+					border: none;
+					background: none;
+					outline: none;
+					cursor: pointer;
+					i{
+						font-size: 22px;
+					}
+				}
+			}
+			.change{
+				position: relative;
+				width: 106px;
+				height: 61px;
+				line-height: 61px;
+				#unlogin{
+					position: absolute;
+				}
+				#islogin{
+					position: absolute;
+					display: none;
+					.leave{
+						position: absolute;
+						height: 30px;
+						line-height: 30px;
+						text-align: center;
+						width: 106px;
+						background: #FFFFFF;
+						top: 61px;
+						cursor: pointer;
+						display: none;
+					}
+				}
+				#islogin:hover .leave{display: block;}
+			}
+			i{font-size: 24px;}
+			a{@include btPadding(9px);}
+			#login{border-right: 1px solid #e6ebf3;}
+		}
+	}
+	#cart{
+		width: 380px;
+		border: 1px solid #1d1d1d;
+		position: absolute;
+		right: 0;
+		top: 60px;
+		background: #FFFFFF;
+		overflow: hidden;
+		display: none;
+		.cart-bottom{
+			padding: 19px;
+			border-top: 1px solid #1d1d1d;
+			float: left;
+		}
+		.js-left{
+			float: left;
+			line-height: 20px;
+			font-size: 14px;
+			color: #1d1d1d;
+			width: 30%;
+			@include tmMargin(10px,10px);
+		}
+		.js-right{
+			float: right;
+			line-height: 20px;
+			font-size: 14px;
+			color: #1d1d1d;
+			@include tmMargin(10px,10px);
+			span{
+				font-weight: 400;
+				font-size: 16px;
+				color: #ea212e;
+			}
+		}
+		.sarch_cart{
+			float: left;
+			width: 340px;
+			height: 44px;
+			line-height: 42px;
+			font-size: 14px;
+			color: #fff;
+			background-color: #ea212e;
+			text-align: center;
+			transition: .5s;
+		}
+		.sarch_cart:hover{
+			background: #1d1d1d;
+		}
+		#cart_list{
+			padding: 19px;
+			width: 380px;
+			.list-left{
+				float: left;
+				img{
+					width: 98px;
+					height: 118px;
+				}
+			}
+			.list-right{
+				float: left;
+				width: 235px;
+				height: 125px;
+				padding-left: 20px;
+				._name{
+					font-size: 14px;
+					color: #1d1d1d;
+					line-height: 16px;
+					height: 32px;
+					margin-bottom: 5px;
+				}
+				p{
+					font-size: 13px;
+					line-height: 16px;
+					color: #7c7c7c;
+					padding: 3px 0;
+					span{
+						font-size: 13px;
+						color: #1d1d1d;
+						line-height: 16px;
+					}
+					#head_del{
+						float: right;
+					    color: #7c7c7c;
+						cursor: pointer;
+						font-size: 13px;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
