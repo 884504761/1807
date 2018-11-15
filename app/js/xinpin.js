@@ -29,7 +29,7 @@ require(["config"],function(){
 				var timer = null;
 				$.ajax({
 					method: "get",
-					url:"http://rap2api.taobao.org/app/mock/115083/product",
+					url:"http://rap2api.taobao.org/app/mock/115083/product?"+id,
 					success: function(res){
 						console.log(res);
 						html += template("pro-template",{products: res.products});
@@ -44,7 +44,7 @@ require(["config"],function(){
 						timer = setTimeout(function(){
 							$.ajax({
 								method: "get",
-								url:"http://rap2api.taobao.org/app/mock/115083/product",
+								url:"http://rap2api.taobao.org/app/mock/115083/product?"+id,
 								success: function(res){
 									html += template("pro-template",{products: res.products});
 									$("#proList").html(html);
@@ -62,7 +62,7 @@ require(["config"],function(){
 				var timer = null;
 				$.ajax({
 					method: "get",
-					url:"http://rap2api.taobao.org/app/mock/115083/product_hot",
+					url:"http://rap2api.taobao.org/app/mock/115083/product_hot?"+id,
 					success: function(res){
 						console.log(res);
 						html += template("pro-template",{products: res.products});
@@ -77,7 +77,7 @@ require(["config"],function(){
 						timer = setTimeout(function(){
 							$.ajax({
 								method: "get",
-								url:"http://rap2api.taobao.org/app/mock/115083/product_hot",
+								url:"http://rap2api.taobao.org/app/mock/115083/product_hot?"+id,
 								success: function(res){
 									html += template("pro-template",{products: res.products});
 									$("#proList").html(html);
@@ -95,7 +95,7 @@ require(["config"],function(){
 				var timer = null;
 				$.ajax({
 					method: "get",
-					url:"http://rap2api.taobao.org/app/mock/115083/product_search",
+					url:"http://rap2api.taobao.org/app/mock/115083/product_search?"+id,
 					success: function(res){
 						console.log(res);
 						html += template("pro-template",{products: res.products});
@@ -110,7 +110,7 @@ require(["config"],function(){
 						timer = setTimeout(function(){
 							$.ajax({
 								method: "get",
-								url:"http://rap2api.taobao.org/app/mock/115083/product_search",
+								url:"http://rap2api.taobao.org/app/mock/115083/product_search?"+id,
 								success: function(res){
 									html += template("pro-template",{products: res.products});
 									$("#proList").html(html);
