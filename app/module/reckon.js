@@ -70,7 +70,7 @@ define(["jquery","jquery-cookie"],function($){
 		}
 		console.log(narr);
 		var str = JSON.stringify(narr);
-		$.cookie("cart",str,{ expires: 7 });
+		$.cookie("cart",str,{ path:"/",expires: 7 });
 	}
 	return new Reckon();
 })

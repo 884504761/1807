@@ -110,7 +110,7 @@ require(["config"],function(){
 					var index = $(this).parent().parent().index();
 					products.splice(index,1);
 					var str = JSON.stringify(products);
-					$.cookie("cart",str,{ expires: 7 });
+					$.cookie("cart",str,{ path:"/",expires: 7 });
 					$(this).parent().parent().remove();
 					reckon.totals();
 					var end = $.cookie("cart");
