@@ -1,0 +1,1 @@
+define(["tools"],function(n){return new function(){}});

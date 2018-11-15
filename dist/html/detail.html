@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/detail.css"/>
+		<link rel="stylesheet" type="text/css" href="/libs/font_lhjbw9ppsqm/iconfont.css"/>
+	</head>
+	<body>
+		<header></header>
+		<div class="content center">
+			<div class="content-top" id="proList">
+				<script type="text/html" id="pro-template">
+				{{each products}}
+				<div class="row">
+					<div class="row-left">
+						<div class="col1">
+							<ul id="Stabs">
+							</ul>
+						</div>
+						<div class="col2 clearfix">
+							<ul id="Btabs">
+								<li><img src="{{ $value.pic1 }}" id="first_pic"></li>
+								<li><img src="{{ $value.pic2 }}" ></li>
+								<li><img src="{{ $value.pic3 }}" ></li>
+								<li><img src="{{ $value.pic4 }}" ></li>
+								<li><img src="{{ $value.pic5 }}" ></li>
+								<li><img src="{{ $value.pic6 }}" ></li>
+<!-- 								<li><img src="/images/pic1.png" ></li>
+								<li><img src="/images/pic2.png" ></li>
+								<li><img src="/images/pic3.png" ></li>
+								<li><img src="/images/pic4.png" ></li>
+								<li><img src="/images/pic5.png" ></li>
+								<li><img src="/images/pic6.png" ></li> -->
+								<li id="sm_box"></li>
+							</ul>
+						</div>
+					</div>
+					<div class="row-right">
+						<h1 class="title" id="name">{{ $value.name }}</h1>
+						<h1 class="price">￥<span id="price">{{ $value.price }}</span>.00</h1>
+						<div class="product-color">
+							<p>颜色： 炮兵绿	(357) {{ $value.no }}</p>
+							<div class="color-main">
+								<div class="color1" style="background-color: {{ $value.color1 }};"></div>
+								<div class="color2" style="background-color: {{ $value.color2 }};"></div>
+							</div>
+						</div>
+						<div class="mob">
+							<div class="size-name">
+								<div class="pdp-title">
+									<p>尺码：<span>查看尺码表</span></p>
+								</div>
+								<div class="pdp-size clearfix">
+									<ul class="change_size">
+										<li>S</li>
+										<li>M</li>
+										<li>L</li>
+										<li>XL</li>
+										<li>XXL</li>
+									</ul>
+								</div>
+							</div>
+							<div class="pdp-num">
+								<p>数量：<span id="number">1</span></p>
+								<div class="calculateNum">
+									<div id="res"><i class="iconfont icon-jianhao"></i></div>
+									<input type="text" id="_num" value="1">
+									<div id="add"><i class="iconfont icon-hao"></i></div>
+								</div>
+							</div>
+							<div class="pdp-btn">
+								<a href="javascript:;" id="addCar">加入购物车</a>
+								<a href="javascript:;">立即购买</a>
+							</div>
+							<div class="pdp-share">
+								<a href="javascript:;"><i class="iconfont icon-xinxi"></i>在线客服</a>
+								<a href="javascript:;"><i class="iconfont icon-weibo"></i>分享</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="big_box"><img src="{{ $value.pic1 }}" id="bigImg"></div>
+				{{/each}}
+				</script>
+			</div>
+			<div class="content-detasils">
+				<div class="describe">
+					<div class="describe-title" id="describe-title1">
+						<h2 class="_title ac">产品描述<span><i class="iconfont icon-hao"></i></span></h2>
+						<h2 class="_title">产品描述<span><i class="iconfont icon-jianhao"></i></span></h2>
+					</div>
+					<div class="describe-main" id="describe-main">
+						<div class="describe-text">
+							<div class="box clear-fix">
+								<span>科技介绍</span>
+								<ul>
+									<li>排潮面料，有助于让你保持干爽舒适</li>
+								</ul>
+							</div>
+							<div class="box clear-fix">
+								<span>商品细节</span>
+								<ul>
+									<li>轻质透气的针织面料，伸展自如，有助加强运动灵活度</li>
+									<li>袖口、下摆与领口皆饰有罗纹</li>
+									<li>连肩袖设计</li>
+									<li>正面袋鼠式口袋</li>
+								</ul>
+							</div>
+							<div class="box clearfix">
+								<span>材质说明</span>
+								<ul>
+									<li>面料：棉，聚酯纤维</li>
+								</ul>
+							</div>
+							<div class="box clearfix">
+								<span>适合运动</span>
+								<ul>
+									<li>适合训练等运动</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="pice-tag">
+						<span>价格说明</span>
+							<ul>
+								<li>划线价格：划线的价格可能是商品的专柜吊牌价或正品零售价指导价或该商品的曾经展示过的销售价等，仅供您参考</li>
+								<li>未划线价格：未划线的价格是商品在官网上的销售标价，具体的成交价格可能因会员使用优惠券发生变化，最终以订单结算页价格为准</li>
+							</ul>
+					</div>
+				</div>
+				<div class="describe">
+					<div class="describe-title" id="describe-title2">
+						<h2 class="_title ac">尺码表及剪裁指引<span><i class="iconfont icon-hao"></i></span></h2>
+						<h2 class="_title">尺码表及剪裁指引<span><i class="iconfont icon-jianhao"></i></span></h2>
+					</div>
+					<div class="size-specification" id="size-specification">
+						<div class="good clearfix">
+							<div class="good-pic"><img src="/images/xiushen.jpg" ></div>
+							<div class="good-text">
+								<div class="good-text-title">
+									FITTED<br>修身型
+								</div>
+								<p>勾勒运动曲线，轻松无负担；贴合身材的流线型设计；活跃自如释放压力</p>
+							</div>
+						</div>
+						<div class="size-main">
+							<div class="size-detail clearfix">
+								<dl>
+									<dt>尺码</dt>
+									<dd>S</dd>
+									<dd>M</dd>
+									<dd>L</dd>
+									<dd>XL</dd>
+									<dd>XXL</dd>
+									<dd>3XL</dd>
+								</dl>
+								<dl>
+									<dt>身高(CM)</dt>
+									<dd>163-167</dd>
+									<dd>168-172</dd>
+									<dd>173-177</dd>
+									<dd>178-182</dd>
+									<dd>183-187</dd>
+									<dd>188-192</dd>
+								</dl>
+								<dl>
+									<dt>胸围(CM)</dt>
+									<dd>85-87</dd>
+									<dd>88-92</dd>
+									<dd>93-97</dd>
+									<dd>98-102</dd>
+									<dd>102-107</dd>
+									<dd>108-112</dd>
+								</dl>
+								<dl>
+									<dt>腰围(CM)</dt>
+									<dd>72-74</dd>
+									<dd>76-79</dd>
+									<dd>80-84</dd>
+									<dd>85-89</dd>
+									<dd>90-94</dd>
+									<dd>95-99</dd>
+								</dl>
+							</div>
+							<div class="explain">
+								<p>胸围 :测量尺定位于腋下，绕胸部最宽部位一周，记录数值。</p>
+								<p>腰围 :测量尺绕腰部最细部位一周，记录数值。</p>
+								<p>点击查看更多 <a href="javascript:;">'UA男子上装尺码对照表'</a> </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer></footer>
+	</body>
+	<script type="text/javascript" src="/libs/require/require.js" data-main="/js/detail.js"></script>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/xinpin.css"/>
+		<link rel="stylesheet" type="text/css" href="/libs/font_xni3n1p5m6r/iconfont.css"/>
+	</head>
+	<body>
+		<header></header>
+		<div class="banner"><img src="/images/PC-D11-SHOES.jpg" ></div>
+		<div class="all center">
+			<div class="artical">
+				<div class="artical-head">
+					<h4>所有新品推荐</h4>
+					<span>312&nbsp;件商品</span>
+				</div>
+				<div class="artical-line">
+					<p><a href="/">首页</a><span>/</span><a href="#" id="_name1">新品推荐</a><span>/</span><a href="#" id="_name2">所有新品推荐</a></p>
+				</div>
+			</div>
+			<div class="list clearfix">
+				<ul class="ul-list">
+					<li><a href="javascript:;">商品分类</a><span></span></li>
+					<li><a href="javascript:;">性别</a><span></span></li>
+					<li><a href="javascript:;">裁剪</a><span></span></li>
+					<li><a href="javascript:;">适合运动</a><span></span></li>
+					<li><a href="javascript:;">颜色</a><span></span></li>
+					<li><a href="javascript:;">价格区间</a><span></span></li>
+					<li><a href="javascript:;">新品推荐</a></li>
+					<li><a href="javascript:;">热卖商品</a></li>
+					<li><a href="javascript:;">优惠商品</a></li>
+					<li><a href="javascript:;">排序</a><span></span></li>
+				</ul>
+				<div class="list-bottom clearfix">
+					<ul class="spfl clearfix">
+						<li>男子新品推荐</li>
+						<li>女子新品推荐</li>
+						<li>少年新品推荐</li>
+						<li>所有新品推荐</li>
+					</ul>
+					<ul class="spfl clearfix">
+						<li>男子 (150)</li>
+						<li>女子 (113)</li>
+						<li>男童 (12)</li>
+						<li>女童 (12)</li>
+						<li>少年 (35)</li>
+						<li>男小童 (10)</li>
+						<li>女小童 (3)</li>
+					</ul>
+					<ul class="spfl clearfix">
+						<li>训练 (10)</li>
+						<li>跑步 (2)</li>
+						<li>篮球 (1)</li>
+					</ul>
+					<ul class="spfl clearfix">
+						<li>黑色</li>
+						<li>蓝色</li>
+						<li>深蓝色</li>
+						<li>黄色</li>
+						<li>灰色</li>
+						<li>绿色</li>
+						<li>银色</li>
+						<li>红色</li>
+						<li>橙色</li>
+						<li>白色</li>
+					</ul>
+					<ul class="spfl clearfix">
+						<li>￥0-￥200 (1)</li>
+						<li>￥200-￥400 (2)</li>
+						<li>￥400-￥600 (5)</li>
+						<li>￥600以上 (5)</li>
+					</ul>
+					<ul class="spfl clearfix">
+						<li>默认综合排序</li>
+						<li>最新发布商品</li>
+						<li>销量从高到低</li>
+						<li>价格从低到高</li>
+						<li>价格从高到低</li>
+					</ul>
+				</div>
+				
+			</div>
+			<div class="content">
+				<ul class="content-minute clearfix" id="proList"></ul>
+					<script type="text/html" id="pro-template">
+					{{each products}}
+					<li>
+						<a class="box" href="/html/detail.html?{{ $value.id }}">
+							<div class="pic">
+							<img src="{{ $value.img }}" >
+							<div class="kuaisu">快速预览</div>
+							</div>
+							<div class="good-con">
+								<div class="good-con-list">
+									<div class="color c1" style="background-color: {{ $value.color1 }};"></div>
+									<div class="color c2" style="background-color: {{ $value.color2 }};"></div>
+								</div>
+								<p class="p1">{{ $value.name }}</p>
+								<p class="p2">￥{{ $value.price }}</p>
+							</div>
+						</a>
+					</li>
+					{{/each}}
+					</script>
+			</div>
+		</div>
+		<footer></footer>
+		<div id="beside"><i class="iconfont icon-shouqi"></i></div>
+	</body>
+	<script type="text/javascript" src="/libs/require/require.js" data-main="/js/xinpin.js"></script>
+</html>

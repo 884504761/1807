@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/register.css"/>
+		<link rel="stylesheet" type="text/css" href="/libs/font_xni3n1p5m6r/iconfont.css"/>
+	</head>
+	<body>
+		<header></header>
+		<div class="content center">
+			<div class="box center">
+				<h4>会员注册</h4>
+				<form>
+					<div class="content-top">
+						<div class="form-input">
+							<p>用户名</p>
+							<input type="text" placeholder="请输入邮箱/电话" id="username">
+							<span id="promote1">邮箱或电话格式不正确，请重新输入</span>
+						</div>
+						<div class="form-input">
+							<p>密码</p>
+							<input type="password" placeholder="8-16个字符，必须包含英文、数字、字符中的两种" id="password">
+							<span id="promote2">8-16个字符，必须包含英文、数字、字符中的两种</span>
+						</div>
+						<div class="form-input">
+							<p>确认密码</p>
+							<input type="password" placeholder="请再次输入密码" id="_password">
+							<span id="promote3">两次密码不一致</span>
+						</div>
+					</div>
+					<div class="content-choice">
+						<input type="checkbox" id="ck1"/><span>我愿意接受来自UA中国官方商城的活动邮件和短信</span><br>
+						<input type="checkbox" id="ck2"/><span>我已阅读并同意《网站使用规则》</span>
+					</div>
+					<div class="content-bottom">
+						<button type="submit" id="btn">立即注册</button>
+						<span>已有账号？<a href="/html/login.html">立即登录</a></span>
+					</div>
+				</form>
+			</div>
+		</div>
+		<footer></footer>
+	</body>
+	<script type="text/javascript" src="/libs/require/require.js" data-main="/js/register.js"></script>
+</html>

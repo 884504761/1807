@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/shoppingcart.css"/>
+		<link rel="stylesheet" type="text/css" href="/libs/font_lhjbw9ppsqm/iconfont.css"/>
+	</head>
+	<body>
+		<header></header>
+		<div class="content center">
+			<div class="noProduct isProduct">
+				<div class="article">
+					<p>您的购物车中没有物品</p>
+					<i class="iconfont icon-gouwuche"></i>
+				</div>
+			</div>
+			<div class="Products">
+				<div class="title clearfix">
+					<h3>购物车</h3>
+					<p>已选中<span class="pitch">0</span>件商品</p>
+				</div>
+				<div class="article">
+					<div class="article-top">
+						<ul>
+							<li><input type="checkbox" id="allcheck"/>全选</li>
+							<li>商品信息</li>
+							<li>单价</li>
+							<li>数量</li>
+							<li>小计</li>
+							<li>操作</li>
+						</ul>
+					</div>
+					<div class="article-main">
+						<ul id="addli" class="clearfix">
+							<script type="text/html" id="pro-template">
+							{{each products}}
+							<li class="addli_li">
+								<input type="checkbox" class="checks"/>
+								<div class="information fl">
+									<div class="information-left fl">
+										<img src="{{ $value.pic }}" >
+									</div>
+									<div class="information-right fl">
+										<p>{{ $value.name }}</p>
+										<p style="color:#e60012">10.27-11.11 精选商品直降</p>
+										<p class="massage">颜色：&nbsp;<span>白色</span>尺码：&nbsp;<span class="old_size">{{ $value.size }}</span></p>
+									</div>
+									<a href="javascript:;" class="choice_size">
+										<div class="size_top">
+											<p class="size_old"></p>
+											<span><i class="iconfont icon-shouqi"></i></span>
+										</div>
+										<ul class="size_bottom ac">
+											<li>S</li>
+											<li>M</li>
+											<li>L</li>
+											<li>XL</li>
+											<li>XXL</li>
+										</ul>	
+									</a>
+								</div>
+								<div class="unit-price fl">
+									<p>￥<span id="price">{{ $value.price }}</span></p>
+								</div>
+								<div class="quantity fl">
+									<p class="_num" id="_num">{{ $value.num }}</p>
+									<div class="num">
+										<div class="res"><i class="iconfont icon-jianhao"></i></div>
+										<input type="text" class="the_num">
+										<div class="add"><i class="iconfont icon-hao"></i></div>
+									</div>
+								</div>
+								<div class="sum fl">
+									<p>￥<span id="total">439</span>.00</p>
+								</div>
+								<div class="operate fl">
+									<a href="javascript:;" id="del" class="revise">删除</a>
+									<a href="javascript:;" id="edit" class="revise">编辑</a>
+									<a href="javascript:;" id="cancel" class="revise">取消</a>
+									<a href="javascript:;" id="true" class="revise">确定</a>
+								</div>
+							</li>
+							{{/each}}
+							</script>
+						</ul>
+					</div>
+				</div>
+				<div class="balance">
+					<div class="balance-text fl">
+						<p>
+					全场每满400减50（特殊商品不参与）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 已选中<span class="pitch">0</span>件商品
+							<span id="heji">合计： ￥<i id="total_cost">439</i>.00</span>
+						</p>
+					</div>
+					<div class="liji fl">立即结算</div>
+				</div>
+			</div>
+		</div>
+		<footer></footer>
+	</body>
+	<script type="text/javascript" src="/libs/require/require.js" data-main="/js/shoppingcart.js"></script>
+</html>
