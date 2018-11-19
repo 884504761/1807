@@ -21,15 +21,12 @@ require(["config"],function(){
 		}).then(function(){
 			var id = location.search.slice(1);
 			console.log(id);
-			if(id == 1){
-				$(".artical-head h4").html("所有新品推荐");
-				$("#_name1").html("新品推荐");
-				$("#_name2").html("所有新品推荐");
+			function list_ajax(url){
 				var html = "";
 				var timer = null;
 				$.ajax({
 					method: "get",
-					url:"http://rap2api.taobao.org/app/mock/115083/product?"+id,
+					url:url+id,
 					success: function(res){
 						console.log(res);
 						html += template("pro-template",{products: res.products});
@@ -44,7 +41,7 @@ require(["config"],function(){
 						timer = setTimeout(function(){
 							$.ajax({
 								method: "get",
-								url:"http://rap2api.taobao.org/app/mock/115083/product?"+id,
+								url:url+id,
 								success: function(res){
 									html += template("pro-template",{products: res.products});
 									$("#proList").html(html);
@@ -53,72 +50,72 @@ require(["config"],function(){
 						},1000)
 					}
 				})
+			}
+			if(id == 1){
+				$(".artical-head h4").html("所有新品推荐");
+				$("#_name1").html("新品推荐");
+				$("#_name2").html("所有新品推荐");
+				list_ajax("http://rap2api.taobao.org/app/mock/115083/product?");
 			}
 			else if(id == 2){
 				$(".artical-head h4").html("所有热卖商品");
 				$("#_name1").html("热卖商品");
 				$("#_name2").html("所有热卖商品");
-				var html = "";
-				var timer = null;
-				$.ajax({
-					method: "get",
-					url:"http://rap2api.taobao.org/app/mock/115083/product_hot?"+id,
-					success: function(res){
-						console.log(res);
-						html += template("pro-template",{products: res.products});
-						$("#proList").html(html);
-					}
-	
-				});
-				$(window).scroll(function(){
-					if($(window).scrollTop() > $("body").height()-1200){
-						clearTimeout(timer);
-						console.log("到底啦");
-						timer = setTimeout(function(){
-							$.ajax({
-								method: "get",
-								url:"http://rap2api.taobao.org/app/mock/115083/product_hot?"+id,
-								success: function(res){
-									html += template("pro-template",{products: res.products});
-									$("#proList").html(html);
-								}
-							});
-						},1000)
-					}
-				})
+				list_ajax("http://rap2api.taobao.org/app/mock/115083/product_hot?");
+			}
+			else if(id == 3){
+				$(".artical-head h4").html("所有男子装备");
+				$("#_name1").html("男子装备");
+				$("#_name2").html("所有男子装备");
+				list_ajax("http://rap2api.taobao.org/app/mock/115083/product_men?");
+			}
+			else if(id == 4){
+				$(".artical-head h4").html("所有女子装备");
+				$("#_name1").html("女子装备");
+				$("#_name2").html("所有女子装备");
+				list_ajax("http://rap2api.taobao.org/app/mock/115083/product_female?");
+			}
+			else if(id == 5){
+				$(".artical-head h4").html("所有少年装备");
+				$("#_name1").html("少年装备");
+				$("#_name2").html("所有少年装备");
+				list_ajax("http://rap2api.taobao.org/app/mock/115083/product_child?");
+			}
+			else if(id == 6){
+				$(".artical-head h4").html("PERPETUAL系列");
+				$("#_name1").html("男子装备");
+				$("#_name2").html("PERPETUAL系列");
+				list_ajax("http://rap2api.taobao.org/app/mock/115083/product_PERPETUAL?");
+			}
+			else if(id == 7){
+				$(".artical-head h4").html("MVP系列");
+				$("#_name1").html("女子装备");
+				$("#_name2").html("MVP系列");
+				list_ajax("http://rap2api.taobao.org/app/mock/115083/product_MVP?");
+			}
+			else if(id == 8){
+				$(".artical-head h4").html("ULTIMATE SPEED系列训练鞋");
+				$("#_name1").html("ULTIMATE SPEED系列训练鞋");
+				$("#_name2").html("");
+				list_ajax("http://rap2api.taobao.org/app/mock/115083/product_ULTIMATE?");
+			}
+			else if(id == 9){
+				$(".artical-head h4").html("STORM GOLF系列");
+				$("#_name1").html("STORM GOLF系列");
+				$("#_name2").html("");
+				list_ajax("http://rap2api.taobao.org/app/mock/115083/product_STORM?");
+			}
+			else if(id == 10){
+				$(".artical-head h4").html("LV COLLECTION系列");
+				$("#_name1").html("LV COLLECTION系列");
+				$("#_name2").html("");
+				list_ajax("http://rap2api.taobao.org/app/mock/115083/product_LV?");
 			}
 			else{
 				$(".artical-head h4").html("搜索结果");
 				$("#_name1").html("搜索");
 				$("#_name2").html("搜索结果");
-				var html = "";
-				var timer = null;
-				$.ajax({
-					method: "get",
-					url:"http://rap2api.taobao.org/app/mock/115083/product_search?"+id,
-					success: function(res){
-						console.log(res);
-						html += template("pro-template",{products: res.products});
-						$("#proList").html(html);
-					}
-	
-				});
-				$(window).scroll(function(){
-					if($(window).scrollTop() > $("body").height()-1200){
-						clearTimeout(timer);
-						console.log("到底啦");
-						timer = setTimeout(function(){
-							$.ajax({
-								method: "get",
-								url:"http://rap2api.taobao.org/app/mock/115083/product_search?"+id,
-								success: function(res){
-									html += template("pro-template",{products: res.products});
-									$("#proList").html(html);
-								}
-							});
-						},1000)
-					}
-				})
+				list_ajax("http://rap2api.taobao.org/app/mock/115083/product_search?");
 			}
 		}).then(function(){
 			var _this = null;

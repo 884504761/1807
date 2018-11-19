@@ -28,16 +28,9 @@ require(["config"],function(){
 				$("#username").val(arr[1]);
 			}
 			if(getcookie){
-				var obj = {};
-				var arr = getcookie.split(",");
-				//将字符串转换为对象
-				for(var i in arr){
-					var item = arr[i].split(":");
-					//item[0]是属性名,item[1]是属性值
-					obj[item[0]] = item[1];
-				}
-				$("#username").val(obj.username);
-				$("#password").val(obj.password);
+				var data = JSON.parse(getcookie);
+				$("#username").val(data.username);
+				$("#password").val(data.password);
 			};
 // 			$(".btn_login").click(function(){
 // 				username = $("#username").val();
@@ -93,7 +86,8 @@ require(["config"],function(){
 							//判断checkbox是否勾选
 							if($('#remb').is(':checked')){
 								data = JSON.stringify(data);
-								$.cookie("data","username:"+username+",password:"+password,{ expires: 7 });
+								// $.cookie("data","username:"+username+",password:"+password,{ expires: 7 });
+								$.cookie("data",data,{ expires: 7 });
 							}
 							$(location).attr('href', '/');
 						}else{

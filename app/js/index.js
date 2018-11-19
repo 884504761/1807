@@ -21,7 +21,6 @@ require(["config"], function(){
 			header.isLogin();
 			header.head_search();
 			banner.ban();
-			
 		})
 	})
 })
